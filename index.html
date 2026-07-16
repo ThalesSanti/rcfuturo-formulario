@@ -27,7 +27,7 @@ Selecione abaixo o tipo de cadastro.
 
 <div class="botoes">
 
-<button id="btnPF" class="ativo">
+<button id="btnPF">
 Pessoa Física
 </button>
 
@@ -41,8 +41,9 @@ Pessoa Jurídica
 
 <iframe
 id="frame"
-src="pf.html"
-frameborder="0">
+src=""
+frameborder="0"
+style="display: none;">
 </iframe>
 
 </div>
@@ -59,20 +60,20 @@ const pj = document.getElementById("btnPJ");
 
 pf.onclick = function(){
 
-frame.src="pf.html";
+frame.style.display = "block";
+frame.src = "pf.html";
 
 pf.classList.add("ativo");
-
 pj.classList.remove("ativo");
 
 }
 
 pj.onclick = function(){
 
-frame.src="pj.html";
+frame.style.display = "block";
+frame.src = "pj.html";
 
 pj.classList.add("ativo");
-
 pf.classList.remove("ativo");
 
 }
