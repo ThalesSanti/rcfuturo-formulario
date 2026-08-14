@@ -1,0 +1,426 @@
+<form id="trinity-form-YX98Jdbe" action="https://rcfuturo.trinitysuite.com.br/widget_forms/submit/e1aecb6fc5869e1ec46fa0b79830486b41e43c41?v=3.0" method="post">
+    <div>
+        <input type="hidden" name="tipo" value="J">
+    </div>
+
+    <div class="grupo">
+        <label for="nome_razao">
+            Nome
+            <span class="required">*</span>
+        </label>
+
+        <input
+            type="text"
+            name="nome_razao"
+            id="nome_razao"
+            maxlength="150"
+            value=""
+            required
+        >
+    </div>
+
+    <div class="grupo">
+        <label for="telefones[0]">
+            Telefone
+            <span class="required">*</span>
+        </label>
+
+        <input
+            type="text"
+            name="telefones[0]"
+            id="telefones[0]"
+            value=""
+            placeholder="(XX) XXXX-XXXX"
+            ty-mask="phone"
+            required
+        >
+    </div>
+
+    <div class="grupo">
+        <label for="email">
+            E-mail
+            <span class="required">*</span>
+        </label>
+
+        <input
+            type="text"
+            name="email"
+            id="email"
+            maxlength="150"
+            value=""
+            required
+        >
+    </div>
+
+    <div class="grupo pessoa-juridica">
+        <label for="cnpj">
+            CNPJ
+        </label>
+
+        <input
+            type="text"
+            name="cnpj"
+            id="cnpj"
+            maxlength="18"
+            value=""
+        >
+    </div>
+
+    <div class="grupo pessoa-juridica">
+        <label for="ie">
+            Inscrição Estadual
+        </label>
+
+        <input
+            type="text"
+            name="ie"
+            id="ie"
+            maxlength="20"
+            value=""
+        >
+    </div>
+
+    <div class="grupo">
+        <label for="enderecos[0][cep]">
+            CEP
+        </label>
+
+        <input
+            type="text"
+            name="enderecos[0][cep]"
+            id="enderecos[0][cep]"
+            maxlength="10"
+            value=""
+        >
+    </div>
+
+    <div class="grupo">
+        <label for="enderecos[0][endereco]">
+            Endereço
+        </label>
+
+        <input
+            type="text"
+            name="enderecos[0][endereco]"
+            id="enderecos[0][endereco]"
+            maxlength="200"
+            value=""
+        >
+    </div>
+
+    <div class="grupo">
+        <label for="enderecos[0][numero]">
+            Número
+        </label>
+
+        <input
+            type="text"
+            name="enderecos[0][numero]"
+            id="enderecos[0][numero]"
+            maxlength="30"
+            value=""
+        >
+    </div>
+
+    <div class="grupo">
+        <label for="enderecos[0][bairro]">
+            Bairro
+        </label>
+
+        <input
+            type="text"
+            name="enderecos[0][bairro]"
+            id="enderecos[0][bairro]"
+            maxlength="200"
+            value=""
+        >
+    </div>
+
+    <div class="grupo">
+        <label for="enderecos[0][cidade]">
+            Cidade
+        </label>
+
+        <input
+            type="text"
+            name="enderecos[0][cidade]"
+            id="enderecos[0][cidade]"
+            maxlength="50"
+            value=""
+        >
+    </div>
+
+    <div class="grupo">
+        <label for="enderecos[0][estado]">
+            Estado
+        </label>
+
+        <div>
+            <select
+                name="enderecos[0][estado]"
+                id="enderecos[0][estado]"
+            >
+                <option value=""></option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF"> Federal</option>
+                <option value="ES"> Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT"> Grosso</option>
+                <option value="MS"> Sul</option>
+                <option value="MG"> Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ"> Janeiro</option>
+                <option value="RN"> Norte</option>
+                <option value="RS"> Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC"> Catarina</option>
+                <option value="SP"> Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+                <option value="EX">Exterior</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="grupo">
+        <label for="enderecos[0][complemento]">
+            Complemento
+        </label>
+
+        <input
+            type="text"
+            name="enderecos[0][complemento]"
+            id="enderecos[0][complemento]"
+            maxlength="100"
+            value=""
+        >
+    </div>
+
+    <div class="grupo">
+        <label for="observacoes">
+            Observações
+        </label>
+
+        <textarea
+            name="observacoes"
+            id="observacoes"
+        ></textarea>
+    </div>
+
+    <div>
+        <button type="submit">Enviar</button>
+    </div>
+
+    <div class="mensagem-enviando" style="display: none;">
+        <span>Enviando ...</span>
+    </div>
+
+    <div class="mensagem-sucesso" style="color: green"></div>
+    <div class="mensagem-erro" style="color: red"></div>
+</form>
+
+<script type="text/javascript">
+    (function (formId) {
+        let form = document.getElementById(formId);
+
+        function tyExtractSequence(value, sequence, separator) {
+            return sequence
+                .reduce((a, b) => {
+                    const skip = a.reduce((a, b) => a + b.length, 0);
+
+                    const index = value.substring(skip).indexOf(separator);
+                    const end = skip + (index === -1 ? b : index + 1);
+
+                    return [
+                        ...a,
+                        value.substring(skip, end),
+                    ];
+                }, [])
+                .map((item) => item.replace(/\//g, ''));
+        }
+
+        Array.from(form.querySelectorAll('[ty-mask="phone"]'))
+            .forEach((element) => {
+                element.addEventListener('input', (event) => {
+                    const { target } = event;
+
+                    target.value = target.value.replace(/[^0-9() ]/g, '');
+                });
+
+                element.addEventListener('change', (event) => {
+                    const { target } = event;
+
+                    if (target.value.trim() === '') {
+                        return;
+                    }
+
+                    const phone = target.value.replace(/[^0-9]/g, '');
+                    const ddd = phone.substring(0, 2);
+                    const number = phone.substring(2);
+
+                    target.value = `(${ddd}) ` + tyExtractSequence(number, [number.length === 8 ? 4 : 5, 4], '-').join('-');
+                });
+            });
+
+        function tySearchCep(cep) {
+            return new Promise((resolve) => {
+                const xhr = new XMLHttpRequest();
+
+                xhr.open("GET", `https://viacep.com.br/ws/${cep}/json`);
+
+                xhr.addEventListener('readystatechange', (event) => {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        resolve(JSON.parse(xhr.response));
+                    }
+                });
+
+                xhr.send();
+            });
+        }
+
+        form.querySelectorAll('[name^="enderecos["][name$="][cep]"]').forEach((element) => {
+            element.addEventListener('blur', (event) => {
+                const { name, value } = event.target;
+
+                tySearchCep(value)
+                    .then((address) => {
+                        const prefix = name.substring(0, name.length - 5);
+
+                        form.querySelector(`[name="${prefix}[endereco]"]`).value = address.logradouro;
+                        form.querySelector(`[name="${prefix}[bairro]"]`).value = address.bairro;
+                        form.querySelector(`[name="${prefix}[cidade]"]`).value = address.localidade;
+                        form.querySelector(`[name="${prefix}[estado]"]`).value = address.uf;
+                    });
+            });
+        });
+        function tySendForm(url, data) {
+            return new Promise((resolve) => {
+                const encondedDataPairs = [];
+
+                for (const name in data) {
+                    encondedDataPairs.push(
+                        `${encodeURIComponent(name)}=${encodeURIComponent(data[name])}`,
+                    );
+                }
+
+                const urlEncodedData = encondedDataPairs.join("&").replace(/%20/g, "+");
+
+                const xhr = new XMLHttpRequest();
+
+                xhr.open("POST", url);
+
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+                xhr.addEventListener('readystatechange', (event) => {
+                    if (xhr.readyState == 4) {
+                        resolve({
+                            status: xhr.status,
+                            data: xhr.response
+                        });
+                    }
+                });
+
+                xhr.send(urlEncodedData);
+            });
+        }
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const { target } = event;
+
+            const formData = Object.fromEntries(new FormData(target));
+
+            const elEnviando = form.querySelector('.mensagem-enviando');
+
+            if (elEnviando != null) {
+                elEnviando.style.display = 'block';
+            }
+
+            tySendForm(target.action, formData)
+                .then((response) => {
+                    if (elEnviando != null) {
+                        elEnviando.style.display = 'none';
+                    }
+
+                    try {
+                        const data = JSON.parse(response.data);
+
+                        if (response.status == 200) {
+                            form.querySelector('.mensagem-erro').style.display = 'none';
+                            form.querySelector('.mensagem-sucesso').innerHTML = data.message;
+                            form.querySelector('.mensagem-sucesso').style.display = 'block';
+                        } else {
+                            throw data.message;
+                        }
+                    } catch (error) {
+                        form.querySelector('.mensagem-sucesso').style.display = 'none';
+                        form.querySelector('.mensagem-erro').innerHTML = error;
+                        form.querySelector('.mensagem-erro').style.display = 'block';
+                    }
+                });
+        });
+    })('trinity-form-YX98Jdbe')
+</script>
+
+<style type="text/css">
+    #trinity-form-YX98Jdbe > div {
+        margin-bottom: 10px;
+    }
+
+    /* Estilo para as etiquetas <label> */
+    #trinity-form-YX98Jdbe label {
+        font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+
+    #trinity-form-YX98Jdbe .grupo > label {
+        display: block;
+        margin-bottom: 5px;
+        font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+
+    #trinity-form-YX98Jdbe .grupo > label > span.required {
+        color: red;
+    }
+
+    /* Estilo para os campos de entrada <input> e <select> */
+    #trinity-form-YX98Jdbe input[type="text"],
+    #trinity-form-YX98Jdbe input[type="email"],
+    #trinity-form-YX98Jdbe input[type="number"],
+    #trinity-form-YX98Jdbe textarea,
+    #trinity-form-YX98Jdbe select {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    /* Estilo para o botão de envio */
+    #trinity-form-YX98Jdbe button[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    /* Estilo para as mensagens de status */
+    #trinity-form-YX98Jdbe .mensagem-enviando,
+    #trinity-form-YX98Jdbe .mensagem-sucesso,
+    #trinity-form-YX98Jdbe .mensagem-erro {
+        font-weight: bold;
+    }
+</style>
