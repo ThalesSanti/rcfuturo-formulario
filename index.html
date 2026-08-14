@@ -25,6 +25,7 @@
 O que você deseja?
 </p>
 
+
 <!-- ETAPA 1: SERVIÇO OU PRODUTO -->
 
 <div class="botoes" id="botoesTipo">
@@ -39,9 +40,12 @@ Comprar um Produto
 
 </div>
 
+
 <!-- ETAPA 2: PESSOA FÍSICA OU JURÍDICA -->
 
-<div class="botoes" id="botoesPessoa" style="display: none;">
+<div id="etapaPessoa" style="display: none;">
+
+<div class="botoes" id="botoesPessoa">
 
 <button id="btnPF">
 Pessoa Física
@@ -52,6 +56,15 @@ Pessoa Jurídica
 </button>
 
 </div>
+
+<button id="btnVoltar" type="button">
+← Voltar
+</button>
+
+</div>
+
+
+<!-- FORMULÁRIO -->
 
 <div class="formulario">
 
@@ -66,6 +79,7 @@ style="display: none;">
 
 </div>
 
+
 <script>
 
 const frame = document.getElementById("frame");
@@ -74,11 +88,15 @@ const textoInstrucao = document.getElementById("textoInstrucao");
 
 const botoesTipo = document.getElementById("botoesTipo");
 
+const etapaPessoa = document.getElementById("etapaPessoa");
+
 const botoesPessoa = document.getElementById("botoesPessoa");
 
 const btnServico = document.getElementById("btnServico");
 
 const btnProduto = document.getElementById("btnProduto");
+
+const btnVoltar = document.getElementById("btnVoltar");
 
 const pf = document.getElementById("btnPF");
 
@@ -97,7 +115,11 @@ textoInstrucao.innerText = "Selecione o tipo de cadastro.";
 
 botoesTipo.style.display = "none";
 
-botoesPessoa.style.display = "flex";
+etapaPessoa.style.display = "block";
+
+frame.style.display = "none";
+
+frame.src = "";
 
 }
 
@@ -112,7 +134,34 @@ textoInstrucao.innerText = "Selecione o tipo de cadastro.";
 
 botoesTipo.style.display = "none";
 
-botoesPessoa.style.display = "flex";
+etapaPessoa.style.display = "block";
+
+frame.style.display = "none";
+
+frame.src = "";
+
+}
+
+
+// VOLTAR PARA SERVIÇO OU PRODUTO
+
+btnVoltar.onclick = function(){
+
+tipoSelecionado = "";
+
+textoInstrucao.innerText = "O que você deseja?";
+
+botoesTipo.style.display = "flex";
+
+etapaPessoa.style.display = "none";
+
+frame.style.display = "none";
+
+frame.src = "";
+
+pf.classList.remove("ativo");
+
+pj.classList.remove("ativo");
 
 }
 
