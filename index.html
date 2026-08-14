@@ -21,11 +21,27 @@
 
 <h1>Cadastro de Clientes</h1>
 
-<p>
-Selecione abaixo o tipo de cadastro.
+<p id="textoInstrucao">
+O que você deseja?
 </p>
 
-<div class="botoes">
+<!-- ETAPA 1: SERVIÇO OU PRODUTO -->
+
+<div class="botoes" id="botoesTipo">
+
+<button id="btnServico">
+Solicitar um Serviço
+</button>
+
+<button id="btnProduto">
+Comprar um Produto
+</button>
+
+</div>
+
+<!-- ETAPA 2: PESSOA FÍSICA OU JURÍDICA -->
+
+<div class="botoes" id="botoesPessoa" style="display: none;">
 
 <button id="btnPF">
 Pessoa Física
@@ -54,26 +70,94 @@ style="display: none;">
 
 const frame = document.getElementById("frame");
 
+const textoInstrucao = document.getElementById("textoInstrucao");
+
+const botoesTipo = document.getElementById("botoesTipo");
+
+const botoesPessoa = document.getElementById("botoesPessoa");
+
+const btnServico = document.getElementById("btnServico");
+
+const btnProduto = document.getElementById("btnProduto");
+
 const pf = document.getElementById("btnPF");
 
 const pj = document.getElementById("btnPJ");
 
+let tipoSelecionado = "";
+
+
+// ESCOLHA: SERVIÇO
+
+btnServico.onclick = function(){
+
+tipoSelecionado = "servico";
+
+textoInstrucao.innerText = "Selecione o tipo de cadastro.";
+
+botoesTipo.style.display = "none";
+
+botoesPessoa.style.display = "flex";
+
+}
+
+
+// ESCOLHA: PRODUTO
+
+btnProduto.onclick = function(){
+
+tipoSelecionado = "produto";
+
+textoInstrucao.innerText = "Selecione o tipo de cadastro.";
+
+botoesTipo.style.display = "none";
+
+botoesPessoa.style.display = "flex";
+
+}
+
+
+// PESSOA FÍSICA
+
 pf.onclick = function(){
 
 frame.style.display = "block";
+
+if(tipoSelecionado === "servico"){
+
 frame.src = "pf.html";
 
+} else if(tipoSelecionado === "produto"){
+
+frame.src = "pf-vendas.html";
+
+}
+
 pf.classList.add("ativo");
+
 pj.classList.remove("ativo");
 
 }
 
+
+// PESSOA JURÍDICA
+
 pj.onclick = function(){
 
 frame.style.display = "block";
+
+if(tipoSelecionado === "servico"){
+
 frame.src = "pj.html";
 
+} else if(tipoSelecionado === "produto"){
+
+frame.src = "pj-vendas.html";
+
+}
+
 pj.classList.add("ativo");
+
 pf.classList.remove("ativo");
 
 }
